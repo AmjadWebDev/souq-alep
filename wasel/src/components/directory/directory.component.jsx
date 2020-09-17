@@ -9,13 +9,13 @@ class Directory extends React.Component {
       sections: [
         {
           title: "canned foods",
-          imageUrl: "../../../public/imgs/canned.jpg",
+          imageUrl: "",
           id: 1,
           linkUrl: "shop/canned-foods",
         },
         {
           title: "rice & grain",
-          imageUrl: "",
+          imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
           id: 2,
           linkUrl: "shop/rice-grain",
         },
@@ -27,43 +27,37 @@ class Directory extends React.Component {
         },
         {
           title: "oils & ghee",
-          imageUrl: "",
-          size: "large",
+          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
           id: 4,
           linkUrl: "shop/oil-ghee",
         },
         {
           title: "bread & pastries",
           imageUrl: "",
-          size: "large",
           id: 5,
           linkUrl: "shop/bread-pastries",
         },
         {
           title: "dessert & chips",
           imageUrl: "",
-          size: "large",
           id: 6,
           linkUrl: "shop/dessert-chips",
         },
         {
           title: "spices & nuts",
           imageUrl: "",
-          size: "large",
           id: 7,
           linkUrl: "shop/spices-nuts",
         },
         {
           title: "beverages & liquids",
           imageUrl: "",
-          size: "large",
           id: 8,
           linkUrl: "shop/beverages-liquids",
         },
         {
           title: "nonfood",
           imageUrl: "",
-          size: "large",
           id: 9,
           linkUrl: "shop/nonfood",
         },
@@ -73,7 +67,7 @@ class Directory extends React.Component {
 
   render() {
     return (
-      <div className="menu-directory">
+      <div className="directory-menu">
         {this.state.sections.map(({ title, id, imageUrl }) => (
           <MenuItem key={id} title={title} imageUrl={imageUrl} />
         ))}
