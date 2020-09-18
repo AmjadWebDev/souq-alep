@@ -9,55 +9,55 @@ class Directory extends React.Component {
       sections: [
         {
           title: "canned foods",
-          imageUrl: "",
+          imageUrl: "imgs/canned.jpg",
           id: 1,
-          linkUrl: "shop/canned-foods",
+          linkUrl: "canned",
         },
         {
           title: "rice & grain",
-          imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+          imageUrl: "imgs/rice.jpg",
           id: 2,
           linkUrl: "shop/rice-grain",
         },
         {
           title: "dairy & cheese",
-          imageUrl: "",
+          imageUrl: "imgs/cheese.jpg",
           id: 3,
           linkUrl: "shop/dairy-cheese",
         },
         {
           title: "oils & ghee",
-          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+          imageUrl: "imgs/oil.jpg",
           id: 4,
           linkUrl: "shop/oil-ghee",
         },
         {
           title: "bread & pastries",
-          imageUrl: "",
+          imageUrl: "imgs/bread.jpg",
           id: 5,
           linkUrl: "shop/bread-pastries",
         },
         {
           title: "dessert & chips",
-          imageUrl: "",
+          imageUrl: "imgs/dessert.jpg",
           id: 6,
           linkUrl: "shop/dessert-chips",
         },
         {
           title: "spices & nuts",
-          imageUrl: "",
+          imageUrl: "imgs/spices.jpg",
           id: 7,
           linkUrl: "shop/spices-nuts",
         },
         {
           title: "beverages & liquids",
-          imageUrl: "",
+          imageUrl: "imgs/liquids.jpeg",
           id: 8,
           linkUrl: "shop/beverages-liquids",
         },
         {
           title: "nonfood",
-          imageUrl: "",
+          imageUrl: "imgs/nonfood.jpg",
           id: 9,
           linkUrl: "shop/nonfood",
         },
@@ -68,8 +68,8 @@ class Directory extends React.Component {
   render() {
     return (
       <div className="directory-menu">
-        {this.state.sections.map(({ title, id, imageUrl }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} />
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
     );
