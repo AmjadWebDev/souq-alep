@@ -11,7 +11,7 @@ class Directory extends React.Component {
           title: "canned foods",
           imageUrl: "imgs/canned.jpg",
           id: 1,
-          linkUrl: "canned",
+          linkUrl: "shop/canned",
         },
         {
           title: "rice & grain",
